@@ -38,7 +38,6 @@ dynamic = ["version"]
 dependencies = [
   "typing_extensions >=3.7; python_version<'3.8'",
   "manim >=0.16.0",
-  "pangocairo >= 1.30.0",
 ]
 
 [project.optional-dependencies]
