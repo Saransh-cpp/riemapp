@@ -53,11 +53,16 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies
+      - name: Install dependencies on Ubuntu
         if: matrix.runs-on == 'ubuntu-latest'
         run: |
           sudo apt-get update
-          sudo apt install libpango1.0-dev
+          sudo apt install libpango1.0-dev ffmpeg
+
+      - name: Install dependencies on macOS
+        if: matrix.runs-on == 'macos-latest'
+        run: |
+          brew install ffmpeg
 
       - name: Install package
         run: python -m pip install .[test]
