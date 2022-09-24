@@ -83,7 +83,7 @@ testpaths = [
 
 
 [tool.mypy]
-files = "src"
+files = "riemapp"
 python_version = "3.7"
 warn_unused_configs = true
 strict = true
