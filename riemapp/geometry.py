@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import manim
 
-__all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon"]
+__all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon", "Triangle", "Dot"]
 
 
 class Square(manim.Square):
@@ -50,3 +50,12 @@ class Triangle(manim.Triangle):
 
     def __repr__(self) -> str:
         return "Triangle()"
+
+
+class Dot(manim.Dot):
+    def __init__(self, radius: float, **kwargs) -> None:
+        self.radius = radius
+        manim.Dot.__init__(self, radius=self.radius, **kwargs)
+    
+    def __repr__(self):
+        return f"Dot(radius={self.radius})"
