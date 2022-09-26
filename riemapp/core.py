@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from manim import ApplyComplexFunction, Create, NumberPlane, Scene
 
-from riemapp.geometry import Polygon, Rectangle, RegularPolygon, Square,  Triangle
+from riemapp.geometry import Polygon, Rectangle, RegularPolygon, Square, Triangle
 
 # from manim.utils.file_ops import open_file as open_media_file
 
