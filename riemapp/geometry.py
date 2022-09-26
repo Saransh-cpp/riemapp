@@ -42,3 +42,10 @@ class RegularPolygon(manim.RegularPolygon):
 
     def __repr__(self):
         return f"RegularPolygon(n={self.n})"
+
+class Triangle(manim.Triangle):
+    def __init__(self, **kwargs) -> None:
+        manim.Triangle.__init__(self, **kwargs)
+
+    def __repr__(self):
+        return f"Triangle"
