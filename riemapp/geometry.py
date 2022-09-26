@@ -43,7 +43,7 @@ class RegularPolygon(manim.RegularPolygon):
     def __repr__(self):
         return f"RegularPolygon(n={self.n})"
 
-    
+
 class Triangle(manim.Triangle):
     def __init__(self, **kwargs) -> None:
         manim.Triangle.__init__(self, **kwargs)
@@ -56,6 +56,6 @@ class Dot(manim.Dot):
     def __init__(self, radius: float, **kwargs) -> None:
         self.radius = radius
         manim.Dot.__init__(self, radius=self.radius, **kwargs)
-    
+
     def __repr__(self):
         return f"Dot(radius={self.radius})"
