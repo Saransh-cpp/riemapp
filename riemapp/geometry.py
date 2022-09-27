@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import manim
+import numpy as np
 
 __all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon", "Triangle", "Dot"]
 
@@ -53,9 +54,10 @@ class Triangle(manim.Triangle):
 
 
 class Dot(manim.Dot):
-    def __init__(self, radius: float, **kwargs) -> None:
+    def __init__(self, point: list | np.ndarray, radius: float, **kwargs) -> None:
         self.radius = radius
-        manim.Dot.__init__(self, radius=self.radius, **kwargs)
+        self.point = point
+        manim.Dot.__init__(self, point=self.point, radius=self.radius, **kwargs)
 
     def __repr__(self):
-        return f"Dot(radius={self.radius})"
+        return f"Dot(point={self.point}, radius={self.radius})"
