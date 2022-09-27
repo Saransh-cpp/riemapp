@@ -2,14 +2,16 @@ from __future__ import annotations
 
 from manim import ApplyComplexFunction, Create, NumberPlane, Scene
 
-from riemapp.geometry import Polygon, Rectangle, RegularPolygon, Square
+from riemapp.geometry import Dot, Polygon, Rectangle, RegularPolygon, Square, Triangle
 
 # from manim.utils.file_ops import open_file as open_media_file
 
 
 class ComplexMap:
     def __init__(
-        self, f: Square | Rectangle | Polygon | RegularPolygon, transformation: callable
+        self,
+        f: Square | Rectangle | Polygon | RegularPolygon | Triangle | Dot,
+        transformation: callable,
     ):
         self.f = f
         self.transformation = transformation
@@ -32,7 +34,7 @@ class ComplexMap:
     class Animate(Scene):
         def __init__(
             self,
-            f: Square | Rectangle | Polygon | RegularPolygon,
+            f: Square | Rectangle | Polygon | RegularPolygon | Triangle | Dot,
             transformation: callable,
             add_numberplane: bool = False,
             run_time: float = 1.0,

@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 import manim
+import numpy as np
 
-__all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon"]
+__all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon", "Triangle", "Dot"]
 
 
 class Square(manim.Square):
@@ -42,3 +43,21 @@ class RegularPolygon(manim.RegularPolygon):
 
     def __repr__(self):
         return f"RegularPolygon(n={self.n})"
+
+
+class Triangle(manim.Triangle):
+    def __init__(self, **kwargs) -> None:
+        manim.Triangle.__init__(self, **kwargs)
+
+    def __repr__(self) -> str:
+        return "Triangle()"
+
+
+class Dot(manim.Dot):
+    def __init__(self, point: list | np.ndarray, radius: float, **kwargs) -> None:
+        self.radius = radius
+        self.point = point
+        manim.Dot.__init__(self, point=self.point, radius=self.radius, **kwargs)
+
+    def __repr__(self):
+        return f"Dot(point={self.point}, radius={self.radius})"
