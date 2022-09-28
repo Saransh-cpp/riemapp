@@ -88,7 +88,7 @@ repos:
     rev: v0.971
     hooks:
       - id: mypy
-        files: src
+        files: riemapp
         args: []
 
   - repo: https://github.com/shellcheck-py/shellcheck-py
