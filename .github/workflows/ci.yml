@@ -88,11 +88,10 @@ jobs:
           sudo apt-get update
           sudo apt install libpango1.0-dev ffmpeg
 
-      - name: Install pythonic dependencies
-        run: python -m pip install .[dev,docs]
-
-      - name: Build documentation
-        run: mkdocs build
+      - name: Install pythonic dependencies and build docs
+        run: |
+          python -m pip install .[dev,docs]
+          mkdocs build
 
   dist:
     name: Distribution build
