@@ -1,7 +1,8 @@
 from __future__ import annotations
 
-import riemapp as rp
 import manim
+
+import riemapp as rp
 
 
 def test_triangle():
