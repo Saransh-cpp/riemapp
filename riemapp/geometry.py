@@ -5,7 +5,15 @@ from __future__ import annotations
 import manim
 import numpy as np
 
-__all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon", "Triangle", "Dot"]
+__all__ = [
+    "Square",
+    "Rectangle",
+    "Polygon",
+    "RegularPolygon",
+    "Triangle",
+    "Circle",
+    "Dot",
+]
 
 
 class Square(manim.Square):
@@ -51,6 +59,15 @@ class Triangle(manim.Triangle):
 
     def __repr__(self) -> str:
         return "Triangle()"
+
+
+class Circle(manim.Circle):
+    def __init__(self, radius: float, **kwargs) -> None:
+        self.radius = radius
+        manim.Circle.__init__(self, radius, **kwargs)
+
+    def __repr__(self):
+        return f"Circle(radius={self.radius})"
 
 
 class Dot(manim.Dot):
