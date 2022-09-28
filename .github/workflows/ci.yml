@@ -83,7 +83,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install doc dependencies
+      - name: Install ubuntu dependencies
+        run: |
+          sudo apt-get update
+          sudo apt install libpango1.0-dev ffmpeg
+
+      - name: Install pythonic dependencies
         run: python -m pip install ".[dev, tests]"
 
       - name: Build documentation
