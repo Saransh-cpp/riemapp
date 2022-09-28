@@ -88,8 +88,11 @@ repos:
     rev: v0.971
     hooks:
       - id: mypy
-        files: src
-        args: []
+        files: riemapp
+        args: [--show-error-codes]
+        additional_dependencies:
+          - numpy==1.22.0
+          - packaging
 
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.8.0.4
