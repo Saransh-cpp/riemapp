@@ -6,7 +6,15 @@ import manim
 import numpy as np
 import numpy.typing as npt
 
-__all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon", "Triangle", "Dot", "Line"]
+__all__ = [
+    "Square",
+    "Rectangle",
+    "Polygon",
+    "RegularPolygon",
+    "Triangle",
+    "Dot",
+    "Line",
+]
 
 
 class Square(manim.Square):
