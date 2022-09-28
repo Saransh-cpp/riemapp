@@ -84,7 +84,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install doc dependencies
-        run: python -m pi`p install ".[dev, tests]"
+        run: python -m pip install ".[dev, tests]"
 
       - name: Build documentation
         run: mkdocs build
