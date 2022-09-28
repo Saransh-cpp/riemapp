@@ -66,7 +66,7 @@ class Dot(manim.Dot):
 class Line(manim.Line):
     def __init__(self, start: list | np.array, end: list | np.array, **kwargs):
         self.start = start
-        self.end = end 
+        self.end = end
         manim.Line.__init__(self, start=self.start, end=self.end, **kwargs)
 
     def __repr__(self):
