@@ -9,6 +9,9 @@ build:
   os: "ubuntu-20.04"
   tools:
     python: "3.9"
+  apt_packages:
+    - libpango1.0-dev
+    - ffmpeg
 
 python:
   install:
