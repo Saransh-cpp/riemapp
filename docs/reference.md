@@ -1,6 +1,6 @@
 ## Geometries
 
-::: riemapp.geometry.Square
+::: riemapp.geometry
 
 ## Core
 
