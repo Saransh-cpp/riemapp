@@ -10,8 +10,9 @@ def test_triangle():
     assert triangle.__repr__() == "Triangle()"
     assert isinstance(triangle, (rp.geometry.Triangle, manim.Triangle))
 
+
 def test_square():
-    square = rp.geometry.Square(side_length=2.)
+    square = rp.geometry.Square(side_length=2.0)
     assert square.__repr__() == f"Square(side_length={square.side_length})"
     assert isinstance(square, (rp.geometry.Square, manim.Square))
-    assert square.side_length == 2.
+    assert square.side_length == 2.0
