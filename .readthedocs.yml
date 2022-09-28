@@ -1,21 +1,22 @@
-# .readthedocs.yml
+# .readthedocs.yaml
 # Read the Docs configuration file
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
 # Required
 version: 2
 
-# Build documentation in the docs/ directory with Sphinx
-sphinx:
-  configuration: docs/conf.py
-
-# Include PDF and ePub
-formats: all
+build:
+  os: "ubuntu-20.04"
+  tools:
+    python: "3.9"
+  apt_packages:
+    - libpango1.0-dev
+    - ffmpeg
 
 python:
-  version: "3.9"
   install:
-    - method: pip
-      path: .
-      extra_requirements:
-        - docs
+    - requirements: docs/requirements.txt
+
+mkdocs:
+  configuration: mkdocs.yml
+  fail_on_warning: false
