@@ -9,12 +9,22 @@ __all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon", "Triangle", "Dot"
 
 
 class Square(manim.Square):
+    """
+    Constructs a square geometry with the specified side length.
+
+    An alias class for manim.Square.
+
+    Args:
+        side_length:
+            square's side length
+    """
+
     def __init__(self, side_length: float, **kwargs) -> None:
         self.side_length = side_length
         manim.Square.__init__(self, self.side_length, **kwargs)
 
     def __repr__(self):
-        return f"Square(side_length={self.side_length})"
+        return f"Square(side_length={self.side_length}) (alias for manim.Square)"
 
 
 class Rectangle(manim.Rectangle):
