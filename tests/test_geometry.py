@@ -59,5 +59,16 @@ def test_polygon():
         polygon.__repr__()
         == f"Polygon(vertices={[v for v in polygon.vertices]}) (alias for manim.Polygon)"
     )
-    assert isinstance(polygon, (rp.geometry.Polygon))
+    assert isinstance(polygon, (rp.geometry.Polygon, manim.Polygon))
     assert polygon.vertices == ([2, 4, 8], [1, 0, 0], [4, 4, 8])
+
+
+def test_dot():
+    dot = rp.geometry.Dot([0, 0, 0], 0.88)
+    assert (
+        dot.__repr__()
+        == f"Dot(point={dot.point}, radius={dot.radius}) (alias for manim.Dot)"
+    )
+    assert isinstance(dot, (rp.geometry.Dot, manim.Dot))
+    assert dot.point == [0, 0, 0]
+    assert dot.radius == 0.88

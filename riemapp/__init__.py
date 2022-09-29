@@ -1,7 +1,7 @@
 """
-Copyright (c) 2022 My Name. All rights reserved.
+Copyright (c) 2022 Saransh Chopra. All rights reserved.
 
-riemapp: Complex mappings using manim.
+riemapp: Manim powered complex mappings.
 """
 
 from __future__ import annotations

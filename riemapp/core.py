@@ -36,6 +36,11 @@ class ComplexMap:
         self.f = f
         self.transformation = transformation
 
+    def __repr__(self) -> str:
+        return (
+            f"ComplexMap(f={self.f!r}, transformation={self.transformation.__name__})"
+        )
+
     def generate_animation(
         self, *, add_numberplane: bool = False, run_time: float = 1.0
     ) -> ComplexMap.Animate:
@@ -53,7 +58,10 @@ class ComplexMap:
                 A custom manim Scene object
         """
         self.animate = self.Animate(
-            self.f, self.transformation, add_numberplane, run_time
+            self.f,
+            self.transformation,
+            add_numberplane=add_numberplane,
+            run_time=run_time,
         )
 
         return self.animate
@@ -93,6 +101,7 @@ class ComplexMap:
             self,
             f: Square | Polygon | RegularPolygon | Triangle | Circle | Dot | Line,
             transformation: Callable[[float], float],
+            *,
             add_numberplane: bool = False,
             run_time: float = 1.0,
         ) -> None:
@@ -102,11 +111,16 @@ class ComplexMap:
             self.transformation = transformation
             super().__init__()
 
+        def __repr__(self) -> str:
+            return (
+                f"Animate(f={self.f!r}, transformation={self.transformation.__name__})"
+            )
+
         def construct(self) -> None:
             """
             The default manim constructer
             """
-            self.add_numberplane and self.add(NumberPlane)
+            self.add_numberplane and self.add(NumberPlane())
             self.play(Create(self.f, run_time=self.run_time))
             self.play(
                 ApplyComplexFunction(self.transformation, self.f),

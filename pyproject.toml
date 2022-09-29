@@ -15,11 +15,11 @@ authors = [
   { name = "Parth Tripathi", email = "parthxtripathi03@gmail.com" },
   { name = "Saransh Chopra", email = "saransh0701@gmail.com" },
 ]
-description = "Complex mappings using manim."
+description = "Manim powered complex mappings."
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
-  "Development Status :: 1 - Planning",
+  "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
@@ -64,7 +64,8 @@ docs = [
 Homepage = "https://github.com/Saransh-cpp/riemapp"
 "Bug Tracker" = "https://github.com/Saransh-cpp/riemapp/issues"
 Discussions = "https://github.com/Saransh-cpp/riemapp/discussions"
-Changelog = "https://github.com/Saransh-cpp/riemapp/releases"
+Changelog = "https://riemapp.readthedocs.io/en/latest/changelog/"
+Documentation = "https://riemapp.readthedocs.io/"
 
 [tool.hatch]
 version.source = "vcs"
