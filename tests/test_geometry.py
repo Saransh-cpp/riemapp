@@ -23,7 +23,9 @@ def test_square():
 
 def test_circle():
     circle = rp.geometry.Circle(radius=1.0)
-    assert circle.__repr__() == f"Circle(radius={circle.radius}) (alias for manim.Circle)"
+    assert (
+        circle.__repr__() == f"Circle(radius={circle.radius}) (alias for manim.Circle)"
+    )
     assert isinstance(circle, (rp.geometry.Circle, manim.Circle))
     assert circle.radius == 1.0
 
