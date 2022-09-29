@@ -57,7 +57,7 @@ class Rectangle(manim.Rectangle):
         manim.Rectangle.__init__(self, height=self.height, width=self.width, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Rectangle(height={self.height}, width={self.width} (alias for manim.Rectangle))"
+        return f"Rectangle(height={self.height}, width={self.width}) (alias for manim.Rectangle)"
 
 
 class Polygon(manim.Polygon):
