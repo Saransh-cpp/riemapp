@@ -9,11 +9,11 @@ build-backend = "hatchling.build"
 [project]
 name = "riemapp"
 authors = [
+  { name = "Saransh Chopra", email = "saransh0701@gmail.com" },
   { name = "Agriya Khetarpal", email = "agriyakhetarpal@gmail.com" },
   { name = "Naman Priyadarshi", email = "namanpriyadarshicr7@gmail.com" },
   { name = "Onkar Mahapatra", email = "onkarmahapatra627@gmail.com" },
   { name = "Parth Tripathi", email = "parthxtripathi03@gmail.com" },
-  { name = "Saransh Chopra", email = "saransh0701@gmail.com" },
 ]
 description = "Manim powered complex mappings."
 readme = "README.md"
