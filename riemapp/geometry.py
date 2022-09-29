@@ -13,7 +13,7 @@ __all__ = [
     "RegularPolygon",
     "Triangle",
     "Dot",
-    "Line"
+    "Line",
 ]
 
 
@@ -99,10 +99,15 @@ class Line(manim.Line):
         start:
             Line's starting points
         end:
-            Line's end points 
+            Line's end points
     """
 
-    def __init__(self, start: Sequence[float] |  npt.NDArray[np.float64], end: Sequence[float] |  npt.NDArray[np.float64], **kwargs: dict[str, Any]):
+    def __init__(
+        self,
+        start: Sequence[float] | npt.NDArray[np.float64],
+        end: Sequence[float] | npt.NDArray[np.float64],
+        **kwargs: dict[str, Any],
+    ):
         self.start = start
         self.end = end
         manim.Line.__init__(self, start=self.start, end=self.end, **kwargs)
