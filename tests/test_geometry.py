@@ -50,4 +50,4 @@ def test_regularpolygon():
     assert isinstance(
         regularpolygon, (rp.geometry.RegularPolygon, manim.RegularPolygon)
     )
-    assert regularpolygon.sides == 6
+    assert regularpolygon.n == 6
