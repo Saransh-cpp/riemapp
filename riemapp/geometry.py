@@ -67,11 +67,18 @@ class RegularPolygon(manim.RegularPolygon):
 
 
 class Triangle(manim.Triangle):
+    """
+    Constructs an equilateral riangle geometry.
+
+    An alias class for manim.Triangle.
+
+    """
+
     def __init__(self, **kwargs: dict[str, Any]) -> None:
         manim.Triangle.__init__(self, **kwargs)
 
     def __repr__(self) -> str:
-        return "Triangle()"
+        return "Triangle() (alias for manim.Triangle)"
 
 
 class Dot(manim.Dot):
