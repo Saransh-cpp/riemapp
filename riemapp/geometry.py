@@ -8,7 +8,6 @@ import numpy.typing as npt
 
 __all__ = [
     "Square",
-    "Rectangle",
     "Polygon",
     "RegularPolygon",
     "Triangle",
@@ -37,28 +36,6 @@ class Square(manim.Square):
         return f"Square(side_length={self.side_length}) (alias for manim.Square)"
 
 
-class Rectangle(manim.Rectangle):
-    """
-    Constructs a square geometry with the specified side length.
-
-    An alias class for manim.Square.
-
-    Args:
-        height:
-            rectangle's height length
-        width:
-            rectangle's width length
-    """
-
-    def __init__(self, height: float, width: float, **kwargs: dict[str, Any]) -> None:
-        self.height = height
-        self.width = width
-        manim.Rectangle.__init__(self, height=self.height, width=self.width, **kwargs)
-
-    def __repr__(self) -> str:
-        return f"Rectangle(height={self.height}, width={self.width} (alias for manim.Rectangle))"
-
-
 class Polygon(manim.Polygon):
     """
     Constructs a shape consisting of one close loop of vertices.
@@ -77,7 +54,9 @@ class Polygon(manim.Polygon):
         manim.Polygon.__init__(self, *vertices, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Polygon(vertices={[v for v in self.vertices]}) (alias for manim.Rectangle)"
+        return (
+            f"Polygon(vertices={[v for v in self.vertices]}) (alias for manim.Polygon)"
+        )
 
 
 class RegularPolygon(manim.RegularPolygon):
@@ -96,7 +75,7 @@ class RegularPolygon(manim.RegularPolygon):
         manim.RegularPolygon.__init__(self, self.n, **kwargs)
 
     def __repr__(self) -> str:
-        return f"RegularPolygon(n={self.n}) (alias for manim.Rectangle)"
+        return f"RegularPolygon(n={self.n}) (alias for manim.RegularPolygon)"
 
 
 class Triangle(manim.Triangle):
