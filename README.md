@@ -12,7 +12,31 @@
 ![License](https://img.shields.io/github/license/Saransh-cpp/riemapp?color=blue)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-TODO
+riemapp is a fast, easy-to-use, minimal library for Python 3.7+ that aliases
+[manim](https://github.com/ManimCommunity/manim) 0.16.0+ functions for
+visualising animated and intuitive complex mappings (transformations from the
+real plane to the comple plane) for various shapes and real-valued functions in
+two dimensions. It uses a minimum number of dependencies through
+[FFmpeg](https://github.com/FFmpeg/FFmpeg) and
+[pangocairo](https://gitlab.gnome.org/GNOME/pango) on Linux.
+
+Users and learners may use riemapp to:
+
+1. Plot (user-defined)
+
+- Points
+- Lines
+- Triangles
+- Squares
+- Rectangles
+- Other regular polygons
+- Circles
+- Irregular polygons
+- …and so on
+
+2. Create smooth, precise animations for plotted figures and map them on the
+   Argand plane according to user-defined complex functions.
+3. Save these animations and play them in the default video player available
 
 ## Structure
 
