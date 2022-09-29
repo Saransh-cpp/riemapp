@@ -66,7 +66,7 @@ class Polygon(manim.Polygon):
     An alias class for manim.Polygon.
 
     Args:
-        vertices:
+        *vertices:
             Polygon's vertices points
     """
 
