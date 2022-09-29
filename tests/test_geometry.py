@@ -22,7 +22,7 @@ def test_square():
 
 
 def test_line():
-    line = rp.geometry.Line(start = [2], end = [4])
+    line = rp.geometry.Line(start=[2], end=[4])
     assert (
         line.__repr__()
         == f"Line(start={line.start}, end={line.end}) (alias for manim.Line)"
