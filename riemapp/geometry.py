@@ -90,6 +90,7 @@ class RegularPolygon(manim.RegularPolygon):
         n:
             number of sides of the RegularPolygon
     """
+
     def __init__(self, n: int, **kwargs: dict[str, Any]) -> None:
         self.n = n
         manim.RegularPolygon.__init__(self, self.n, **kwargs)
