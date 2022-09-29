@@ -46,6 +46,6 @@ def test_regularpolygon():
         regularpolygon.__repr__()
         == f"RegularPolygon(sides={regularpolygon.sides}) (alias for manim.RegularPolygon)"
     )
-    assert isinstance(regularpolygon, (rp.geometry.Line, manim.RegularPolygon))
+    assert isinstance(regularpolygon, (rp.geometry.RegularPolygon, manim.RegularPolygon))
     assert regularpolygon.sides == 6
     
