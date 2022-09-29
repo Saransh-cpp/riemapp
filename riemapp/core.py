@@ -5,6 +5,7 @@ from typing import Callable
 from manim import ApplyComplexFunction, Create, NumberPlane, Scene
 
 from riemapp.geometry import (
+    Circle,
     Dot,
     Line,
     Polygon,
@@ -30,7 +31,14 @@ class ComplexMap:
 
     def __init__(
         self,
-        f: Square | Rectangle | Polygon | RegularPolygon | Triangle | Dot | Line,
+        f: Square
+        | Rectangle
+        | Polygon
+        | RegularPolygon
+        | Triangle
+        | Circle
+        | Dot
+        | Line,
         transformation: Callable[[float], float],
     ) -> None:
         self.f = f
@@ -91,7 +99,14 @@ class ComplexMap:
 
         def __init__(
             self,
-            f: Square | Rectangle | Polygon | RegularPolygon | Triangle | Dot | Line,
+            f: Square
+            | Rectangle
+            | Polygon
+            | RegularPolygon
+            | Triangle
+            | Circle
+            | Dot
+            | Line,
             transformation: Callable[[float], float],
             add_numberplane: bool = False,
             run_time: float = 1.0,

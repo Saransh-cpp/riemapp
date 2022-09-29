@@ -12,6 +12,7 @@ __all__ = [
     "Polygon",
     "RegularPolygon",
     "Triangle",
+    "Circle",
     "Dot",
     "Line",
 ]
@@ -91,6 +92,25 @@ class Triangle(manim.Triangle):
 
     def __repr__(self) -> str:
         return "Triangle() (alias for manim.Triangle)"
+
+
+class Circle(manim.Circle):
+    """
+    Constructs a circular geometry with specified radius.
+
+    An alias class for manim.Circle.
+
+    Args:
+        radius:
+            the radius of the circle
+    """
+
+    def __init__(self, radius: float, **kwargs: dict[str, Any]) -> None:
+        self.radius = radius
+        manim.Circle.__init__(self, self.radius, **kwargs)
+
+    def __repr__(self) -> str:
+        return f"Circle(radius={self.radius}) (alias for manim.Circle)"
 
 
 class Dot(manim.Dot):

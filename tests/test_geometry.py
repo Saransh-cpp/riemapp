@@ -21,6 +21,15 @@ def test_square():
     assert square.side_length == 2.0
 
 
+def test_circle():
+    circle = rp.geometry.Circle(radius=1.0)
+    assert (
+        circle.__repr__() == f"Circle(radius={circle.radius}) (alias for manim.Circle)"
+    )
+    assert isinstance(circle, (rp.geometry.Circle, manim.Circle))
+    assert circle.radius == 1.0
+
+
 def test_line():
     line = rp.geometry.Line(start=[2], end=[4])
     assert (
