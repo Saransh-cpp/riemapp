@@ -6,4 +6,4 @@
  - [ ] New code is fully documented. Includes compliant docstrings, examples, and comments where necessary.
  - [ ] Pull request is nearly complete and ready for detailed review.
 
-<!-- Brief description of the problem and proposed solution (if not already fully described in the issue linked to above): -->
+<!-- Brief description of the problem and proposed solution: -->
