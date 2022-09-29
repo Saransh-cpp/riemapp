@@ -41,10 +41,10 @@ def test_line():
 
 
 def test_regularpolygon():
-    polygon = rp.geometry.RegularPolygon(sides=6)
+    regularpolygon = rp.geometry.RegularPolygon(sides=6)
     assert (
         regularpolygon.__repr__()
-        == f"RegularPolygon(sides={regularpolygon.sides}) (alias for manim.RegularPolygon)"
+        == f"RegularPolygon(n={regularpolygon.n}) (alias for manim.RegularPolygon)"
     )
     assert isinstance(
         regularpolygon, (rp.geometry.RegularPolygon, manim.RegularPolygon)
