@@ -21,10 +21,10 @@ def test_square():
     assert square.side_length == 2.0
 
 def test_line():
-    line = rp.geometry.Line(start = [2, 3, 0], end = [4, 1, 0])
+    line = rp.geometry.Line(start = [2], end = [4])
     assert (
         line.__repr__() 
         == f"Line(start={line.start}, end={line.end}) (alias for manim.Line)"
     )
     assert isinstance(line, (rp.geometry.Line, manim.Line))
-    assert line.start == [2,3,0], line.end == [4, 1, 0]
+    assert line.start == [2], line.end == [4]
