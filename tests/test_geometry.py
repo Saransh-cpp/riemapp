@@ -7,10 +7,7 @@ import riemapp as rp
 
 def test_triangle():
     triangle = rp.geometry.Triangle()
-    assert (
-        triangle.__repr__()
-        == "Triangle() (alias for manim.Triangle)"
-    )
+    assert triangle.__repr__() == "Triangle() (alias for manim.Triangle)"
     assert isinstance(triangle, (rp.geometry.Triangle, manim.Triangle))
 
 
