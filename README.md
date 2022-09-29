@@ -23,17 +23,15 @@ two dimensions. It uses a minimum number of dependencies through
 Users and learners may use riemapp to:
 
 1. Plot (user-defined)
-
-- Points
-- Lines
-- Triangles
-- Squares
-- Rectangles
-- Other regular polygons
-- Circles
-- Irregular polygons
-- …and so on
-
+   - Points
+   - Lines
+   - Triangles
+   - Squares
+   - Rectangles
+   - Other regular polygons
+   - Circles
+   - Irregular polygons
+   - …and so on
 2. Create smooth, precise animations for plotted figures and map them on the
    Argand plane according to user-defined complex functions.
 3. Save these animations and play them in the default video player available
