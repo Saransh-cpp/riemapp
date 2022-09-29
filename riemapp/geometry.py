@@ -13,7 +13,7 @@ __all__ = [
     "RegularPolygon",
     "Triangle",
     "Dot",
-    "Line",
+    "Line"
 ]
 
 
@@ -90,10 +90,22 @@ class Dot(manim.Dot):
 
 
 class Line(manim.Line):
-    def __init__(self, start: list | np.array, end: list | np.array, **kwargs):
+    """
+    Constructs a Line geometry with the specified staring and end points.
+
+    An alias class for manim.Line.
+
+    Args:
+        start:
+            Line's starting points
+        end:
+            Line's end points 
+    """
+
+    def __init__(self, start: Sequence[float] |  npt.NDArray[np.float64], end: Sequence[float] |  npt.NDArray[np.float64], **kwargs: dict[str, Any]):
         self.start = start
         self.end = end
         manim.Line.__init__(self, start=self.start, end=self.end, **kwargs)
 
-    def __repr__(self):
-        return f"Line(start={self.start}, end={self.end})"
+    def __repr__(self) -> str:
+        return f"Line(start={self.start}, end={self.end}) (alias for manim.Line)"
