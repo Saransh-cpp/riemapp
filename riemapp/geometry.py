@@ -86,7 +86,7 @@ class Circle(manim.Circle):
             the radius of the circle
     """
 
-    def __init__(self, radius: float, **kwargs) -> None:
+    def __init__(self, radius: float, **kwargs: dict[str, Any]) -> None:
         self.radius = radius
         manim.Circle.__init__(self, self.radius, **kwargs)
 
