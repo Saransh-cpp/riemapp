@@ -90,7 +90,7 @@ class Circle(manim.Circle):
         self.radius = radius
         manim.Circle.__init__(self, radius, **kwargs)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Circle(radius={self.radius})"
 
 
