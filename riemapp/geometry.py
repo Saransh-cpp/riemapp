@@ -60,6 +60,16 @@ class Rectangle(manim.Rectangle):
 
 
 class Polygon(manim.Polygon):
+    """
+    Constructs a shape consisting of one close loop of vertices.
+
+    An alias class for manim.Polygon.
+
+    Args:
+        *vertices:
+            Polygon's vertices points
+    """
+
     def __init__(
         self, *vertices: Sequence[Sequence[float]], **kwargs: dict[str, Any]
     ) -> None:
@@ -67,16 +77,26 @@ class Polygon(manim.Polygon):
         manim.Polygon.__init__(self, *vertices, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Polygon(vertices={[v for v in self.vertices]})"
+        return f"Polygon(vertices={[v for v in self.vertices]}) (alias for manim.Rectangle)"
 
 
 class RegularPolygon(manim.RegularPolygon):
+    """
+    Constructs a n-sided regular Polygon.
+
+    An alias class for manim.RegularPolygon.
+
+    Args:
+        n:
+            number of sides of the RegularPolygon
+    """
+
     def __init__(self, n: int, **kwargs: dict[str, Any]) -> None:
         self.n = n
         manim.RegularPolygon.__init__(self, self.n, **kwargs)
 
     def __repr__(self) -> str:
-        return f"RegularPolygon(n={self.n})"
+        return f"RegularPolygon(n={self.n}) (alias for manim.Rectangle)"
 
 
 class Triangle(manim.Triangle):
