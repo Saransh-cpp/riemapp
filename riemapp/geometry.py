@@ -91,7 +91,7 @@ class Circle(manim.Circle):
         manim.Circle.__init__(self, self.radius, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Circle(radius={self.radius})"
+        return f"Circle(radius={self.radius}) (alias for manim.Circle)"
 
 
 class Dot(manim.Dot):
