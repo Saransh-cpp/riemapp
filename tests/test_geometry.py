@@ -39,3 +39,15 @@ def test_line():
     assert isinstance(line, (rp.geometry.Line, manim.Line))
     assert line.start == [2]
     assert line.end == [4]
+
+
+def test_regularpolygon():
+    regularpolygon = rp.geometry.RegularPolygon(n=6)
+    assert (
+        regularpolygon.__repr__()
+        == f"RegularPolygon(n={regularpolygon.n}) (alias for manim.RegularPolygon)"
+    )
+    assert isinstance(
+        regularpolygon, (rp.geometry.RegularPolygon, manim.RegularPolygon)
+    )
+    assert regularpolygon.n == 6
