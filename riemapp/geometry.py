@@ -8,7 +8,6 @@ import numpy.typing as npt
 
 __all__ = [
     "Square",
-    "Rectangle",
     "Polygon",
     "RegularPolygon",
     "Triangle",
@@ -37,29 +36,17 @@ class Square(manim.Square):
         return f"Square(side_length={self.side_length}) (alias for manim.Square)"
 
 
-class Rectangle(manim.Rectangle):
+class Polygon(manim.Polygon):
     """
-    Constructs a square geometry with the specified side length.
+    Constructs a shape consisting of one close loop of vertices.
 
-    An alias class for manim.Square.
+    An alias class for manim.Polygon.
 
     Args:
-        height:
-            rectangle's height length
-        width:
-            rectangle's width length
+        *vertices:
+            Polygon's vertices points
     """
 
-    def __init__(self, height: float, width: float, **kwargs: dict[str, Any]) -> None:
-        self.height = height
-        self.width = width
-        manim.Rectangle.__init__(self, height=self.height, width=self.width, **kwargs)
-
-    def __repr__(self) -> str:
-        return f"Rectangle(height={self.height}, width={self.width} (alias for manim.Rectangle))"
-
-
-class Polygon(manim.Polygon):
     def __init__(
         self, *vertices: Sequence[Sequence[float]], **kwargs: dict[str, Any]
     ) -> None:
@@ -67,16 +54,28 @@ class Polygon(manim.Polygon):
         manim.Polygon.__init__(self, *vertices, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Polygon(vertices={[v for v in self.vertices]})"
+        return (
+            f"Polygon(vertices={[v for v in self.vertices]}) (alias for manim.Polygon)"
+        )
 
 
 class RegularPolygon(manim.RegularPolygon):
+    """
+    Constructs a n-sided regular Polygon.
+
+    An alias class for manim.RegularPolygon.
+
+    Args:
+        n:
+            number of sides of the RegularPolygon
+    """
+
     def __init__(self, n: int, **kwargs: dict[str, Any]) -> None:
         self.n = n
         manim.RegularPolygon.__init__(self, self.n, **kwargs)
 
     def __repr__(self) -> str:
-        return f"RegularPolygon(n={self.n})"
+        return f"RegularPolygon(n={self.n}) (alias for manim.RegularPolygon)"
 
 
 class Triangle(manim.Triangle):
