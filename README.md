@@ -15,7 +15,7 @@
 riemapp is a fast, easy-to-use, minimal library for Python 3.7+ that aliases
 [manim](https://github.com/ManimCommunity/manim) 0.16.0+ functions for
 visualising animated and intuitive complex mappings (transformations from the
-real plane to the comple plane) for various shapes and real-valued functions in
+real plane to the complex plane) for various shapes and real-valued functions in
 two dimensions. It uses a minimum number of dependencies through
 [FFmpeg](https://github.com/FFmpeg/FFmpeg) and
 [pangocairo](https://gitlab.gnome.org/GNOME/pango) on Linux.
