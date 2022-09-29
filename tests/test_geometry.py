@@ -26,3 +26,13 @@ def test_circle():
     assert circle.__repr__() == f"Circle(radius={circle.radius})"
     assert isinstance(circle, (rp.geometry.Circle, manim.Circle))
     assert circle.radius == 1.0
+
+
+def test_line():
+    line = rp.geometry.Line(start=[2], end=[4])
+    assert (
+        line.__repr__()
+        == f"Line(start={line.start}, end={line.end}) (alias for manim.Line)"
+    )
+    assert isinstance(line, (rp.geometry.Line, manim.Line))
+    assert line.start == [2], line.end == [4]

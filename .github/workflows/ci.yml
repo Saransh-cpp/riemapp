@@ -38,7 +38,6 @@ jobs:
       Build and test with Python ${{ matrix.python-version }} on ${{
       matrix.runs-on }}
     runs-on: ${{ matrix.runs-on }}
-    needs: [pre-commit]
     strategy:
       fail-fast: false
       matrix:
@@ -76,12 +75,15 @@ jobs:
   docs:
     name: Documentation
     runs-on: ubuntu-latest
-    needs: [pre-commit]
 
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
 
       - name: Install ubuntu dependencies
         run: |
@@ -96,7 +98,6 @@ jobs:
   dist:
     name: Distribution build
     runs-on: ubuntu-latest
-    needs: [pre-commit]
 
     steps:
       - uses: actions/checkout@v3
