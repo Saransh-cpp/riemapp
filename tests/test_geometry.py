@@ -40,10 +40,11 @@ def test_line():
     assert line.start == [2]
     assert line.end == [4]
 
+
 def test_rectangle():
     rectangle = rp.geometry.Rectangle(height=4.0, width=6.0)
     assert (
-        rectangle.__repr__() 
+        rectangle.__repr__()
         == f"Rectangle(height={rectangle.height}, width={rectangle.width} (alias for manim.Rectangle))"
     )
     assert isinstance(rectangle, (rp.geometry.Rectangle, manim.Rectangle))
