@@ -41,7 +41,7 @@ def test_line():
 
 
 def test_regularpolygon():
-    regularpolygon = rp.geometry.RegularPolygon(sides=6)
+    regularpolygon = rp.geometry.RegularPolygon(n=6)
     assert (
         regularpolygon.__repr__()
         == f"RegularPolygon(n={regularpolygon.n}) (alias for manim.RegularPolygon)"
