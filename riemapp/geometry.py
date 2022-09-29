@@ -77,7 +77,7 @@ class Polygon(manim.Polygon):
         manim.Polygon.__init__(self, *vertices, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Polygon(vertices={[v for v in self.vertices]}) (alias for manim.Rectangle)"
+        return f"Polygon(vertices={[v for v in self.vertices]}) (alias for manim.Polygon)"
 
 
 class RegularPolygon(manim.RegularPolygon):
@@ -96,7 +96,7 @@ class RegularPolygon(manim.RegularPolygon):
         manim.RegularPolygon.__init__(self, self.n, **kwargs)
 
     def __repr__(self) -> str:
-        return f"RegularPolygon(n={self.n}) (alias for manim.Rectangle)"
+        return f"RegularPolygon(n={self.n}) (alias for manim.RegularPolygon)"
 
 
 class Triangle(manim.Triangle):
