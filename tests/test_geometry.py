@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import manim
+
 import riemapp as rp
 from riemapp.geometry import Polygon
 
@@ -39,10 +40,9 @@ def test_line():
     assert isinstance(line, (rp.geometry.Line, manim.Line))
     assert line.start == [2], line.end == [4]
 
+
 def test_polygon():
     polygon = rp.geometry.Polygon([2, 4, 8], [1, 0, 0], [4, 4, 8])
-    assert (
-        polygon.__repr__() == f"Polygon(vertices={[v for v in polygon.vertices]})"
-    )
-    assert isinstance(polygon, (rp.geometry.Polygon) )
+    assert polygon.__repr__() == f"Polygon(vertices={[v for v in polygon.vertices]})"
+    assert isinstance(polygon, (rp.geometry.Polygon))
     assert polygon.vertices == ([2, 4, 8], [1, 0, 0], [4, 4, 8])
