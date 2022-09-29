@@ -12,7 +12,7 @@ and build `riemapp`'s documentation.
 reference for all the development work. The guide is a general and much more
 explained collection of documentation available for developing `Scikit-HEP`
 packages. `riemapp` is not a `Scikit-HEP` package, but it still loosely follows
-this developer guide as it is absolutely amazing!
+this developer guide as the guide is absolutely amazing!
 
 ## Installing
 
@@ -141,7 +141,7 @@ The tests can be executed using the `test` dependencies of `riemapp` in the
 following way -
 
 ```
-python -m pytest -ra
+python -m pytest
 ```
 
 ### Running tests with coverage locally
@@ -150,11 +150,7 @@ The coverage value can be obtained while running the tests using `pytest-cov` in
 the following way -
 
 ```
-python -m pytest -ra --cov=riemapp tests/
-```
-
-```
-xdoctest ./src/riemapp/
+python -m pytest --cov=riemapp tests/
 ```
 
 A much more detailed guide on testing with `pytest` is available
