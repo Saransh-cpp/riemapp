@@ -88,7 +88,7 @@ class Circle(manim.Circle):
 
     def __init__(self, radius: float, **kwargs) -> None:
         self.radius = radius
-        manim.Circle.__init__(self, radius, **kwargs)
+        manim.Circle.__init__(self, self.radius, **kwargs)
 
     def __repr__(self) -> str:
         return f"Circle(radius={self.radius})"
