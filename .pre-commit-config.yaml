@@ -52,7 +52,7 @@ repos:
     rev: 5.10.1
     hooks:
       - id: isort
-        args: ["-a", "from __future__ import annotations"] # Python 3.7+
+        args: ["-a", "from __future__ import annotations"]
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v2.37.3
@@ -81,7 +81,6 @@ repos:
     rev: 5.0.4
     hooks:
       - id: flake8
-        exclude: docs/conf.py
         additional_dependencies: *flake8_dependencies
 
   - repo: https://github.com/pre-commit/mirrors-mypy

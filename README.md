@@ -38,7 +38,13 @@ Users and learners may use riemapp to:
 
 ## Structure
 
-TODO
+- Right now, `riemapp` aliases the geometries provided by `manim` under
+  `riemapp.geometry`. Users can either use these alias classes or directly use
+  the `MObject`s provided by `manim`.
+- `riemapp` programatically generates `manim` animations, and the code for this
+  is available under `riemapp.core`. All of the information added by a user is
+  passed into a placeholder class which inherits `manim.Scene`. This class'
+  object is then used to render the animation.
 
 ## Installation
 
@@ -70,7 +76,29 @@ python -m pip install riemapp
 
 ## Usage example
 
-TODO
+```py
+In [1]: import riemapp as rp
+Manim Community v0.16.0.post0
+
+In [2]: import numpy as np
+
+In [3]: square = rp.geometry.Square(2.)
+
+In [4]: square
+Out[4]: Square(side_length=2.0) (alias for manim.Square)
+
+In [5]: cm = rp.ComplexMap(square, lambda z: np.e ** z)
+
+In [6]: cm
+Out[6]: ComplexMap(f=Square(side_length=2.0) (alias for manim.Square), transformation=<lambda>)
+
+In [7]: cm.generate_animation(run_time=2.)
+Out[7]: Animate(f=Square(side_length=2.0) (alias for manim.Square), transformation=<lambda>)
+
+In [8]: cm.render(preview=False)
+```
+
+https://user-images.githubusercontent.com/74055102/193077326-2c21cb9e-eb24-473e-b69c-3376f7664ecd.mp4
 
 ## Contributing
 

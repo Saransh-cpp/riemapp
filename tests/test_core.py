@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 
 import numpy as np
+import pytest
 
 import riemapp as rp
 
@@ -18,6 +19,9 @@ def test_complex_map():
     assert isinstance(cm, rp.ComplexMap)
     assert cm.f == f
     assert cm.transformation == transform
+
+    with pytest.raises(ValueError):
+        cm.render()
 
     animation = cm.generate_animation()
     assert isinstance(cm.animate, cm.Animate)

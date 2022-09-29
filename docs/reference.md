@@ -1,7 +1,7 @@
-## Geometries
-
-::: riemapp.geometry
-
 ## Core
 
 ::: riemapp.core
+
+## Geometries
+
+::: riemapp.geometry
