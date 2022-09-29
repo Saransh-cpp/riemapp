@@ -94,6 +94,13 @@ class Triangle(manim.Triangle):
 
 
 class Dot(manim.Dot):
+    """
+    Constructs a circle with a very small radius.
+
+    An alias class for manim.Dot.
+
+    """
+
     def __init__(
         self,
         point: list[float] | npt.NDArray[np.float64],
@@ -105,7 +112,7 @@ class Dot(manim.Dot):
         manim.Dot.__init__(self, point=self.point, radius=self.radius, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Dot(point={self.point}, radius={self.radius})"
+        return f"Dot(point={self.point}, radius={self.radius}) (alias for manim.Dot)"
 
 
 class Line(manim.Line):
