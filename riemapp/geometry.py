@@ -6,7 +6,15 @@ import manim
 import numpy as np
 import numpy.typing as npt
 
-__all__ = ["Square", "Rectangle", "Polygon", "RegularPolygon", "Triangle", "Dot"]
+__all__ = [
+    "Square",
+    "Rectangle",
+    "Polygon",
+    "RegularPolygon",
+    "Triangle",
+    "Dot",
+    "Line",
+]
 
 
 class Square(manim.Square):
@@ -79,3 +87,30 @@ class Dot(manim.Dot):
 
     def __repr__(self) -> str:
         return f"Dot(point={self.point}, radius={self.radius})"
+
+
+class Line(manim.Line):
+    """
+    Constructs a Line geometry with the specified staring and end points.
+
+    An alias class for manim.Line.
+
+    Args:
+        start:
+            Line's starting points
+        end:
+            Line's end points
+    """
+
+    def __init__(
+        self,
+        start: Sequence[float] | npt.NDArray[np.float64],
+        end: Sequence[float] | npt.NDArray[np.float64],
+        **kwargs: dict[str, Any],
+    ):
+        self.start = start
+        self.end = end
+        manim.Line.__init__(self, start=self.start, end=self.end, **kwargs)
+
+    def __repr__(self) -> str:
+        return f"Line(start={self.start}, end={self.end}) (alias for manim.Line)"
