@@ -51,3 +51,13 @@ def test_regularpolygon():
         regularpolygon, (rp.geometry.RegularPolygon, manim.RegularPolygon)
     )
     assert regularpolygon.n == 6
+
+
+def test_polygon():
+    polygon = rp.geometry.Polygon([2, 4, 8], [1, 0, 0], [4, 4, 8])
+    assert (
+        polygon.__repr__()
+        == f"Polygon(vertices={[v for v in polygon.vertices]}) (alias for manim.Polygon)"
+    )
+    assert isinstance(polygon, (rp.geometry.Polygon))
+    assert polygon.vertices == ([2, 4, 8], [1, 0, 0], [4, 4, 8])
