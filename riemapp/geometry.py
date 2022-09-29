@@ -37,13 +37,25 @@ class Square(manim.Square):
 
 
 class Rectangle(manim.Rectangle):
+    """
+    Constructs a square geometry with the specified side length.
+
+    An alias class for manim.Square.
+
+    Args:
+        height:
+            rectangle's height length
+        width:
+            rectangle's width length
+    """
+
     def __init__(self, height: float, width: float, **kwargs: dict[str, Any]) -> None:
         self.height = height
         self.width = width
         manim.Rectangle.__init__(self, height=self.height, width=self.width, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Rectangle(height={self.height}, width={self.width})"
+        return f"Rectangle(height={self.height}, width={self.width} (alias for manim.Rectangle))"
 
 
 class Polygon(manim.Polygon):
@@ -68,7 +80,7 @@ class RegularPolygon(manim.RegularPolygon):
 
 class Triangle(manim.Triangle):
     """
-    Constructs an equilateral riangle geometry.
+    Constructs an equilateral Triangle geometry.
 
     An alias class for manim.Triangle.
 
