@@ -92,11 +92,13 @@ In [5]: cm = rp.ComplexMap(square, lambda z: np.e ** z)
 In [6]: cm
 Out[6]: ComplexMap(f=Square(side_length=2.0) (alias for manim.Square), transformation=<lambda>)
 
-In [7]: cm.generate_animation(add_numberplane=True, run_time=2.)
+In [7]: cm.generate_animation(run_time=2.)
 Out[7]: Animate(f=Square(side_length=2.0) (alias for manim.Square), transformation=<lambda>)
 
 In [8]: cm.render(preview=False)
 ```
+
+https://user-images.githubusercontent.com/74055102/193077326-2c21cb9e-eb24-473e-b69c-3376f7664ecd.mp4
 
 ## Contributing
 
