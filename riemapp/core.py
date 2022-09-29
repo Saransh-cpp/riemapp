@@ -9,7 +9,6 @@ from riemapp.geometry import (
     Dot,
     Line,
     Polygon,
-    Rectangle,
     RegularPolygon,
     Square,
     Triangle,
@@ -32,7 +31,6 @@ class ComplexMap:
     def __init__(
         self,
         f: Square
-        | Rectangle
         | Polygon
         | RegularPolygon
         | Triangle
@@ -100,7 +98,6 @@ class ComplexMap:
         def __init__(
             self,
             f: Square
-            | Rectangle
             | Polygon
             | RegularPolygon
             | Triangle
