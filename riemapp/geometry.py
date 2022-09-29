@@ -72,6 +72,16 @@ class Triangle(manim.Triangle):
 
 
 class Circle(manim.Circle):
+    """
+    Constructs a circular geometry with specified radius.
+
+    An alias class for manim.Circle.
+
+    Args:
+        radius:
+            the radius of the circle
+    """
+
     def __init__(self, radius: float, **kwargs) -> None:
         self.radius = radius
         manim.Circle.__init__(self, radius, **kwargs)
