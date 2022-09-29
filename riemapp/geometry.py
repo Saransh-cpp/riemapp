@@ -50,8 +50,7 @@ class Rectangle(manim.Rectangle):
             rectangle's width length
     """
 
-    def __init__(self, height: float, width: float, **kwargs: dict[str, Any]
-    ) -> None:
+    def __init__(self, height: float, width: float, **kwargs: dict[str, Any]) -> None:
         self.height = height
         self.width = width
         manim.Rectangle.__init__(self, height=self.height, width=self.width, **kwargs)
