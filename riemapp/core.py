@@ -14,10 +14,20 @@ from riemapp.geometry import (
     Triangle,
 )
 
-# from manim.utils.file_ops import open_file as open_media_file
+__all__ = ["ComplexMap"]
 
 
 class ComplexMap:
+    """
+    Construct and animate a complex mapping.
+
+    Args:
+        f:
+            A geometry (or `MObject`) created using `riemapp.geometry` or `manim`.
+        transformation:
+            The complex transformation as a function reference.
+    """
+
     def __init__(
         self,
         f: Square | Rectangle | Polygon | RegularPolygon | Triangle | Dot | Line,
@@ -28,20 +38,57 @@ class ComplexMap:
 
     def generate_animation(
         self, *, add_numberplane: bool = False, run_time: float = 1.0
-    ) -> None:
+    ) -> ComplexMap.Animate:
+        """
+        Generates a mathematical animation.
+
+        Args:
+            add_numberplane:
+                Adds NumberPlane to the scene.
+            run_time:
+                Run time for creating the provided geometry.
+
+        Returns:
+            animate:
+                A custom manim Scene object
+        """
         self.animate = self.Animate(
             self.f, self.transformation, add_numberplane, run_time
         )
 
-    def render(self, open_file: bool = False) -> None:
+        return self.animate
+
+    def render(self, preview: bool = False) -> None:
+        """
+        Renders the animation.
+
+        Args:
+            preview:
+                Automatically opens the generated animation.
+        """
         if not hasattr(self, "animate"):
             raise ValueError("generate an animation first")
 
-        self.animate.render()
-
-        # open_file and open_media_file(self.animate.renderer.file_writer.movie_file_path)
+        self.animate.render(preview=preview)
 
     class Animate(Scene):
+        """
+        A placeholder class for manim Scene.
+
+        This class is used to construct and generate manim animations programatically.
+
+        Args:
+            f:
+                A geometry (or `MObject`) created using `riemapp.geometry` or `manim`.
+            transformation:
+                The complex transformation as a function reference.
+            add_numberplane:
+                Adds NumberPlane to the scene.
+            run_time:
+                Run time for creating the provided geometry.
+
+        """
+
         def __init__(
             self,
             f: Square | Rectangle | Polygon | RegularPolygon | Triangle | Dot | Line,
@@ -53,25 +100,14 @@ class ComplexMap:
             self.run_time = run_time
             self.f = f
             self.transformation = transformation
+            super().__init__()
 
         def construct(self) -> None:
+            """
+            The default manim constructer
+            """
             self.add_numberplane and self.add(NumberPlane)
             self.play(Create(self.f, run_time=self.run_time))
             self.play(
                 ApplyComplexFunction(self.transformation, self.f),
             )
-
-
-# def generate_animation(f, transformation, add_numberplane=False, open_file=False):
-#     class Test(Scene):
-#         def construct(self):
-#             add_numberplane and self.play(Create(NumberPlane()))
-#             self.play(Create(f))
-#             self.play(
-#                 ApplyComplexFunction(transformation, f),
-#             )
-
-#     test = Test()
-#     test.render()
-
-#     open_file and open_media_file(test.renderer.file_writer.movie_file_path)
