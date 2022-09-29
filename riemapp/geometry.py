@@ -37,13 +37,25 @@ class Square(manim.Square):
 
 
 class Rectangle(manim.Rectangle):
+    """
+    Constructs a square geometry with the specified side length.
+
+    An alias class for manim.Square.
+
+    Args:
+        height:
+            rectangle's height length
+        width:
+            rectangle's width length
+    """
+
     def __init__(self, height: float, width: float, **kwargs: dict[str, Any]) -> None:
         self.height = height
         self.width = width
         manim.Rectangle.__init__(self, height=self.height, width=self.width, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Rectangle(height={self.height}, width={self.width})"
+        return f"Rectangle(height={self.height}, width={self.width} (alias for manim.Rectangle))"
 
 
 class Polygon(manim.Polygon):
@@ -67,14 +79,28 @@ class RegularPolygon(manim.RegularPolygon):
 
 
 class Triangle(manim.Triangle):
+    """
+    Constructs an equilateral Triangle geometry.
+
+    An alias class for manim.Triangle.
+
+    """
+
     def __init__(self, **kwargs: dict[str, Any]) -> None:
         manim.Triangle.__init__(self, **kwargs)
 
     def __repr__(self) -> str:
-        return "Triangle()"
+        return "Triangle() (alias for manim.Triangle)"
 
 
 class Dot(manim.Dot):
+    """
+    Constructs a circle with a very small radius.
+
+    An alias class for manim.Dot.
+
+    """
+
     def __init__(
         self,
         point: list[float] | npt.NDArray[np.float64],
@@ -86,7 +112,7 @@ class Dot(manim.Dot):
         manim.Dot.__init__(self, point=self.point, radius=self.radius, **kwargs)
 
     def __repr__(self) -> str:
-        return f"Dot(point={self.point}, radius={self.radius})"
+        return f"Dot(point={self.point}, radius={self.radius}) (alias for manim.Dot)"
 
 
 class Line(manim.Line):
