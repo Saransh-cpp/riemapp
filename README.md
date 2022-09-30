@@ -8,7 +8,7 @@
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/riemapp)](https://pypi.org/project/riemapp/)
 [![Package Version](https://badge.fury.io/py/riemapp.svg)](https://pypi.org/project/riemapp/)
-[![PyPI Downloads](https://pepy.tech/badge/riemapp)](https://pepy.tech/project/riemapp)
+[![Downloads](https://pepy.tech/badge/riemapp/month)](https://pepy.tech/project/riemapp)
 ![License](https://img.shields.io/github/license/Saransh-cpp/riemapp?color=blue)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
