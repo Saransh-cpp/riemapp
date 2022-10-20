@@ -5,6 +5,15 @@ import manim
 import riemapp as rp
 
 
+def test_arbitrary_curve():
+    def squared(z):
+        return z**2
+
+    curve = rp.geometry.ArbitraryCurve(squared)
+    assert curve.__repr__() == "ArbitraryCurve(curve=squared)"
+    assert isinstance(curve, manim.ParametricFunction)
+
+
 def test_triangle():
     triangle = rp.geometry.Triangle()
     assert triangle.__repr__() == "Triangle() (alias for manim.Triangle)"
