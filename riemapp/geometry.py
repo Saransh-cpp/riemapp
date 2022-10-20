@@ -1,12 +1,13 @@
 from __future__ import annotations
 
-from typing import Any, Sequence
+from typing import Any, Callable, Sequence
 
 import manim
 import numpy as np
 import numpy.typing as npt
 
 __all__ = [
+    "ArbitraryCurve",
     "Square",
     "Polygon",
     "RegularPolygon",
@@ -15,6 +16,38 @@ __all__ = [
     "Dot",
     "Line",
 ]
+
+
+class ArbitraryCurve:
+    """
+    Constructs an arbitrary curve.
+
+    Args:
+        curve:
+            A curve in the form of a Python function
+        x_range:
+            The `(x_min, x_max, x_step)` values of the x-axis
+        y_range:
+            The `(y_min, y_max, y_step)` values of the y-axis
+    """
+
+    def __new__(
+        cls,
+        curve: Callable[[float], Any],
+        *,
+        x_range: Sequence[float] = (-5, 5, 1),
+        y_range: Sequence[float] = (0, 5, 1),
+        **kwargs: dict[str, Any],
+    ) -> manim.ParametricFunction:
+        axes = manim.Axes(x_range=x_range, y_range=y_range, **kwargs)
+        plotted_curve = axes.plot(curve)
+
+        def _new_repr(self):
+            return f"ArbitraryCurve(curve={curve.__name__})"
+
+        manim.ParametricFunction.__repr__ = _new_repr
+
+        return plotted_curve
 
 
 class Square(manim.Square):
