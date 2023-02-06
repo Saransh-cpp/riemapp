@@ -9,7 +9,6 @@ import riemapp as rp
 
 
 def test_complex_map():
-
     f = rp.geometry.Square(2.0)
 
     def transform(z):
