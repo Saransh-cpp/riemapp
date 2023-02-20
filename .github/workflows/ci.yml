@@ -58,7 +58,7 @@ jobs:
       - name: Install dependencies on macOS
         if: matrix.runs-on == 'macos-latest'
         run: |
-          brew install ffmpeg
+          brew install ffmpeg pkg-config
 
       - name: Install package
         run: python -m pip install .[test]
