@@ -67,7 +67,7 @@ jobs:
         run: python -m pytest -ra --cov=riemapp
 
       - name: Upload coverage report
-        uses: codecov/codecov-action@v3.1.1
+        uses: codecov/codecov-action@v3.1.2
 
   docs:
     name: Documentation
