@@ -21,13 +21,13 @@ isolate the library from your global `Python` environment, which would be
 beneficial for reproducing bugs, and the overall development of `riemapp`. The
 first step would be to clone `riemapp` -
 
-```
+```bash
 git clone https://github.com/Scikit-hep/riemapp.git
 ```
 
 and then we can change the current working directory and enter `riemapp` -
 
-```
+```bash
 cd riemapp
 ```
 
@@ -38,14 +38,14 @@ and `Windows` systems.
 
 **UNIX**:
 
-```
+```bash
 python3 -m venv .env
 . .env/bin/activate
 ```
 
 **Windows**:
 
-```
+```bash
 python -m venv .env
 .env\bin\activate
 ```
@@ -63,7 +63,7 @@ python -m venv .env
 
 Install `libpango1.0-dev` if you are on a Linux system -
 
-```
+```bash
 sudo apt-get update
 sudo apt install libpango1.0-dev
 ```
@@ -72,7 +72,7 @@ sudo apt install libpango1.0-dev
 
 `riemapp` uses modern `Python` packaging and can be installed using `pip` -
 
-```
+```bash
 python -m pip install riemapp
 ```
 
@@ -85,14 +85,14 @@ The developer installation of `riemapp` comes with a lot of options -
 These options can be used with `pip` with the editable (`-e`) mode of
 installation in the following ways -
 
-```
+```bash
 pip install -e .[dev,test]
 ```
 
 For example, if you want to install the `docs` dependencies along with the
 dependencies included above, use -
 
-```
+```bash
 pip install -e .[dev,test,docs]
 ```
 
@@ -100,7 +100,7 @@ pip install -e .[dev,test,docs]
 
 `riemapp` can be added to the notebooks using the following commands -
 
-```
+```bash
 python -m ipykernel install --user --name riemapp
 ```
 
@@ -110,7 +110,7 @@ python -m ipykernel install --user --name riemapp
 type-check, and prettify the codebase. The hooks can be installed locally
 using -
 
-```
+```bash
 pre-commit install
 ```
 
@@ -118,7 +118,7 @@ This would run the checks every time a commit is created locally. The checks
 will only run on the files modified by that commit, but the checks can be
 triggered for all the files using -
 
-```
+```bash
 pre-commit run --all-files
 ```
 
@@ -140,7 +140,7 @@ these unit tests.
 The tests can be executed using the `test` dependencies of `riemapp` in the
 following way -
 
-```
+```bash
 python -m pytest
 ```
 
@@ -149,7 +149,7 @@ python -m pytest
 The coverage value can be obtained while running the tests using `pytest-cov` in
 the following way -
 
-```
+```bash
 python -m pytest --cov=riemapp tests/
 ```
 
@@ -181,7 +181,7 @@ The documentation is located in the `docs` folder of the main repository. This
 documentation can be generated using the `docs` dependencies of `riemapp` in the
 following way -
 
-```
+```bash
 mkdocs serve
 ```
 
@@ -189,7 +189,7 @@ The commands executed above will clean any existing documentation build, create
 a new build (in `./site/`), and serve it on your `localhost`. To just build the
 documentation, use -
 
-```
+```bash
 mkdocs build
 ```
 
@@ -203,13 +203,13 @@ developers. All of these commands (or sessions in the language of `nox`) -
 
 `nox` can be installed via `pip` using -
 
-```
+```bash
 pip install nox
 ```
 
 The default sessions (`lint`, `tests`) can be executed using -
 
-```
+```bash
 nox
 ```
 
@@ -217,7 +217,7 @@ nox
 
 The `pre-commit` hooks can be run with `nox` in the following way -
 
-```
+```bash
 nox -s lint
 ```
 
@@ -225,7 +225,7 @@ nox -s lint
 
 Tests can be run with `nox` in the following way -
 
-```
+```bash
 nox -s tests
 ```
 
@@ -233,12 +233,12 @@ nox -s tests
 
 Docs can be built with `nox` in the following way -
 
-```
+```bash
 nox -s docs
 ```
 
 Use the following command if you want to deploy the docs on `localhost` -
 
-```
+```bash
 nox -s docs -- serve
 ```
