@@ -41,7 +41,7 @@ Users and learners may use riemapp to:
 - Right now, `riemapp` aliases the geometries provided by `manim` under
   `riemapp.geometry`. Users can either use these alias classes or directly use
   the `MObject`s provided by `manim`.
-- `riemapp` programatically generates `manim` animations, and the code for this
+- `riemapp` programmatically generates `manim` animations, and the code for this
   is available under `riemapp.core`. All of the information added by a user is
   passed into a placeholder class which inherits `manim.Scene`. This class'
   object is then used to render the animation.

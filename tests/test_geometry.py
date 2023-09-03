@@ -66,7 +66,7 @@ def test_polygon():
     polygon = rp.geometry.Polygon([2, 4, 8], [1, 0, 0], [4, 4, 8])
     assert (
         polygon.__repr__()
-        == f"Polygon(vertices={[v for v in polygon.vertices]}) (alias for manim.Polygon)"
+        == f"Polygon(vertices={[v for v in polygon.vertices]}) (alias for manim.Polygon)"  # noqa: E501
     )
     assert isinstance(polygon, (rp.geometry.Polygon, manim.Polygon))
     assert polygon.vertices == ([2, 4, 8], [1, 0, 0], [4, 4, 8])

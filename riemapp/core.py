@@ -83,7 +83,7 @@ class ComplexMap:
         """
         A placeholder class for manim Scene.
 
-        This class is used to construct and generate manim animations programatically.
+        This class is used to construct and generate manim animations programmatically.
 
         Args:
             f:
@@ -118,7 +118,7 @@ class ComplexMap:
 
         def construct(self) -> None:
             """
-            The default manim constructer
+            The default manim constructor
             """
             self.add_numberplane and self.add(NumberPlane())
             self.play(Create(self.f, run_time=self.run_time))

@@ -31,8 +31,7 @@ jobs:
       - uses: pre-commit/action@v3.0.0
 
   build:
-    name:
-      Build and test with Python ${{ matrix.python-version }} on ${{
+    name: Build and test with Python ${{ matrix.python-version }} on ${{
       matrix.runs-on }}
     runs-on: ${{ matrix.runs-on }}
     strategy:
