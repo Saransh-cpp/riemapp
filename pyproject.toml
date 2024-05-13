@@ -63,6 +63,7 @@ urls.Changelog = "https://riemapp.readthedocs.io/en/latest/changelog/"
 urls.Discussions = "https://github.com/Saransh-cpp/riemapp/discussions"
 urls.Documentation = "https://riemapp.readthedocs.io/"
 urls.Homepage = "https://github.com/Saransh-cpp/riemapp"
+
 [tool.hatch]
 version.source = "vcs"
 build.hooks.vcs.version-file = "riemapp/version.py"
