@@ -40,12 +40,11 @@ dynamic = [
 dependencies = [
   "manim>=0.16",
 ]
-[project.optional-dependencies]
-dev = [
+optional-dependencies.dev = [
   "pytest>=6",
   "pytest-cov>=3",
 ]
-docs = [
+optional-dependencies.docs = [
   "markdown-callouts>=0.2",
   "mkdocs>=1.3.1",
   "mkdocs-include-exclude-files>=0.0.1",
@@ -55,16 +54,15 @@ docs = [
   "mkdocstrings-python-legacy>=0.2.3",
   "pymdown-extensions>=9.5",
 ]
-test = [
+optional-dependencies.test = [
   "pytest>=6",
   "pytest-cov>=3",
 ]
-[project.urls]
-"Bug Tracker" = "https://github.com/Saransh-cpp/riemapp/issues"
-Changelog = "https://riemapp.readthedocs.io/en/latest/changelog/"
-Discussions = "https://github.com/Saransh-cpp/riemapp/discussions"
-Documentation = "https://riemapp.readthedocs.io/"
-Homepage = "https://github.com/Saransh-cpp/riemapp"
+urls."Bug Tracker" = "https://github.com/Saransh-cpp/riemapp/issues"
+urls.Changelog = "https://riemapp.readthedocs.io/en/latest/changelog/"
+urls.Discussions = "https://github.com/Saransh-cpp/riemapp/discussions"
+urls.Documentation = "https://riemapp.readthedocs.io/"
+urls.Homepage = "https://github.com/Saransh-cpp/riemapp"
 
 [tool.hatch]
 version.source = "vcs"
@@ -75,7 +73,12 @@ profile = "black"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+addopts = [
+  "-ra",
+  "--showlocals",
+  "--strict-markers",
+  "--strict-config",
+]
 xfail_strict = true
 filterwarnings = [
   "error",
